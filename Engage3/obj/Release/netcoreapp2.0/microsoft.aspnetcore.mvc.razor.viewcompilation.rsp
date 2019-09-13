@@ -1,0 +1,13 @@
+C:\Users\wramirez\Desktop\backup\Engage3
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=Engage3
+--content-root=C:\Users\wramirez\Desktop\backup\Engage3
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\Home\About.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\Home\Contact.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\Home\Index.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\Shared\Error.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\Shared\_Layout.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\UpdateDatos\Index.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\_ViewImports.cshtml
+--file=C:\Users\wramirez\Desktop\backup\Engage3\Views\_ViewStart.cshtml

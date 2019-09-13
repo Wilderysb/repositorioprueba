@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <ApplicationIcon />
+    <OutputType>WinExe</OutputType>
+    <StartupObject />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\assets - Copia\**" />
+    <Content Remove="wwwroot\assets - Copia\**" />
+    <EmbeddedResource Remove="wwwroot\assets - Copia\**" />
+    <None Remove="wwwroot\assets - Copia\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20190527041349_m01.cs" />
+    <Compile Remove="Migrations\20190527041349_m01.Designer.cs" />
+    <Compile Remove="Migrations\20190527041546_m01.cs" />
+    <Compile Remove="Migrations\20190527041546_m01.Designer.cs" />
+    <Compile Remove="Migrations\20190527043456_m01.cs" />
+    <Compile Remove="Migrations\20190527043456_m01.Designer.cs" />
+    <Compile Remove="Migrations\20190527135317_m01.cs" />
+    <Compile Remove="Migrations\20190527135317_m01.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DocumentFormat.OpenXml" Version="2.9.1" />
+    <PackageReference Include="dropzone" Version="4.3.0" />
+    <PackageReference Include="EPPlus" Version="4.5.3.1" />
+    <PackageReference Include="FastMember.NetCore" Version="1.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JSONSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

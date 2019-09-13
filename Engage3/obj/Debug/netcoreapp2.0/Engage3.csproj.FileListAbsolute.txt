@@ -1,0 +1,33 @@
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.csproj.CoreCompileInputs.cache
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.AssemblyInfoInputs.cache
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.AssemblyInfo.cs
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.deps.json
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.runtimeconfig.json
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.runtimeconfig.dev.json
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.dll
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.pdb
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.dll
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.pdb
+C:\Users\wramirez\Desktop\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.csprojAssemblyReference.cache
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.deps.json
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.runtimeconfig.json
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.runtimeconfig.dev.json
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.dll
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\bin\Debug\netcoreapp2.0\Engage3.pdb
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.csproj.CoreCompileInputs.cache
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.AssemblyInfoInputs.cache
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.AssemblyInfo.cs
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.dll
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.pdb
+C:\Users\wramirez\Desktop\PROYECTO ENGAGE\Engage3\Engage3\Engage3\obj\Debug\netcoreapp2.0\Engage3.csprojAssemblyReference.cache
+C:\Users\wramirez\Desktop\backup\Engage3\bin\Debug\netcoreapp2.0\Engage3.deps.json
+C:\Users\wramirez\Desktop\backup\Engage3\bin\Debug\netcoreapp2.0\Engage3.runtimeconfig.json
+C:\Users\wramirez\Desktop\backup\Engage3\bin\Debug\netcoreapp2.0\Engage3.runtimeconfig.dev.json
+C:\Users\wramirez\Desktop\backup\Engage3\bin\Debug\netcoreapp2.0\Engage3.dll
+C:\Users\wramirez\Desktop\backup\Engage3\bin\Debug\netcoreapp2.0\Engage3.pdb
+C:\Users\wramirez\Desktop\backup\Engage3\obj\Debug\netcoreapp2.0\Engage3.csproj.CoreCompileInputs.cache
+C:\Users\wramirez\Desktop\backup\Engage3\obj\Debug\netcoreapp2.0\Engage3.AssemblyInfoInputs.cache
+C:\Users\wramirez\Desktop\backup\Engage3\obj\Debug\netcoreapp2.0\Engage3.AssemblyInfo.cs
+C:\Users\wramirez\Desktop\backup\Engage3\obj\Debug\netcoreapp2.0\Engage3.dll
+C:\Users\wramirez\Desktop\backup\Engage3\obj\Debug\netcoreapp2.0\Engage3.pdb
+C:\Users\wramirez\Desktop\backup\Engage3\obj\Debug\netcoreapp2.0\Engage3.csprojAssemblyReference.cache

@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banco Ripley- Sistema Engage</title>
+    <meta name="description" content="Elisyam is a Web App and Admin Dashboard Template built with Bootstrap 4">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Google Fonts -->
+    @*<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>*@
+    @*<script>
+        WebFont.load({
+            google: { "families": ["Montserrat:400,500,600,700", "Noto+Sans:400,700"] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>*@
+
+    <script language="javascript" type="text/javascript">
+        function windowClose() {
+            window.open('', '_parent', '');
+            window.close();
+        }
+    </script>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="~/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/assets/img/favicon-16x16.png">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="~/assets/vendors/css/base/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/vendors/css/base/elisyam-1.5.min.css">
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+
+
+</head>
+<body id="page-top">
+
+    <div id="preloader">
+        <div class="canvas">
+            <img src="~/assets/img/logo.png" alt="logo" class="loader-logo">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <div class="page">
+
+        <header class="header">
+            <nav class="navbar fixed-top">
+                <!-- Begin Search Box-->
+                <!-- End Search Box-->
+                <!-- Begin Topbar -->
+                <div class="navbar-holder d-flex align-items-center align-middle justify-content-between">
+                    <!-- Begin Logo -->
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">
+                            <div class="brand-image brand-big">
+                                <img src="~/assets/img/ripley.png" alt="logo" class="logo-big">
+                            </div>
+                            <div class="brand-image brand-small">
+                                <img src="~/assets/img/ripley.png" alt="logo" class="logo-small">
+                            </div>
+                        </a>
+                        <!-- Toggle Button -->
+                        <a id="toggle-btn" href="#" class="menu-btn active">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </a>
+                        <!-- End Toggle -->
+                    </div>
+                    <!-- End Logo -->
+                    <!-- Begin Navbar Menu -->
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center pull-right">
+                        <!-- Search -->
+                        <!-- End Search -->
+                        <!-- Begin Notifications -->
+                        <!-- End Notifications -->
+                        <!-- User -->
+                        <li class="nav-item dropdown">
+                            <a id="user" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link">
+                                <button type="button" class="btn btn-warning mr-1 mb-2"><i class="la la-user"></i>@ViewBag.Usuario</button>
+                            </a>
+                            <ul aria-labelledby="user" class="user-size dropdown-menu">
+                                @*<li class="welcome">
+                                        <a href="#" class="edit-profil"><i class="la la-gear"></i></a>
+                                        <img src="~/assets/img/avatar/avatar-01.jpg" alt="..." class="rounded-circle">
+                                    </li>*@
+                                <li>
+                                    <a href="#" class="dropdown-item">
+                                        Bienvenido @ViewBag.Usuario
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li></li>
+                        <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;<a href="#off-canvas" class="open-sidebar"><i class="la la-ellipsis-h"></i></a></li>
+                        <!-- End User -->
+                        <!-- Begin Quick Actions -->
+                        <!-- End Quick Actions -->
+                    </ul>
+                    <!-- End Navbar Menu -->
+                </div>
+                <!-- End Topbar -->
+            </nav>
+        </header>
+        <div class="default-sidebar">
+            <!-- Begin Side Navbar -->
+            <nav class="side-navbar box-scroll sidebar-scroll">
+                <!-- Begin Main Navigation -->
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#dropdown-db" aria-expanded="false" data-toggle="collapse"><i class="la la-columns"></i><span>Carga Archivos</span></a>
+                        <ul id="dropdown-db" class="collapse list-unstyled pt-0">
+                            <li><a href="#" onclick="windowClose();">Salir</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- End Main Navigation -->
+            </nav>
+            <!-- End Side Navbar -->
+        </div>
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; 2019 - Engage</p>
+            </footer>
+        </div>
+
+    </div>
+
+    <!-- End Modal -->
+    <!-- Begin Vendor Js -->
+    <script src="~/assets/vendors/js/base/jquery.min.js"></script>
+    <script src="~/assets/vendors/js/base/core.min.js"></script>
+    <!-- End Vendor Js -->
+    <!-- Begin Page Vendor Js -->
+    <script src="~/assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+    <script src="~/assets/vendors/js/calendar/moment.min.js"></script>
+    <script src="~/assets/vendors/js/calendar/fullcalendar.min.js"></script>
+    <script src="~/assets/vendors/js/app/app.js"></script>
+    @*<script src="~/assets/vendors/js/app/app.min.js"></script>*@
+
+
+    <!-- End Page Vendor Js -->
+    <!-- Begin Page Snippets -->
+    <script src="~/assets/js/app/calendar/basic-calendar.min.js"></script>
+
+    <environment include="Development">
+        <!-- End Modal -->
+        <!-- Begin Vendor Js -->
+        @*<script src="~/assets/vendors/js/base/jquery.min.js"></script>
+            <script src="~/assets/vendors/js/base/core.min.js"></script>
+            <!-- End Vendor Js -->
+            <!-- Begin Page Vendor Js -->
+            <script src="~/assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+            <script src="~/assets/vendors/js/calendar/moment.min.js"></script>
+            <script src="~/assets/vendors/js/calendar/fullcalendar.min.js"></script>
+            <script src="~/assets/vendors/js/app/app.min.js"></script>
+            <!-- End Page Vendor Js -->
+            <!-- Begin Page Snippets -->
+            <script src="~/assets/js/app/calendar/basic-calendar.min.js"></script>*@
+        <!-- End Page Snippets -->
+        @*<script src="~/lib/jquery/dist/jquery.js"></script>
+            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+            <script src="~/js/site.js" asp-append-version="true"></script>*@
+    </environment>
+    <environment exclude="Development">
+        @*<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                    asp-fallback-test="window.jQuery"
+                    crossorigin="anonymous"
+                    integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+            </script>
+            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                    crossorigin="anonymous"
+                    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+            </script>
+            <script src="~/js/site.min.js" asp-append-version="true"></script>*@
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>

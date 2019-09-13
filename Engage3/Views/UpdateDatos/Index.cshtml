@@ -1,0 +1,501 @@
+﻿<link href="~/assets/vendors/css/base/texto.css" rel="stylesheet" />
+
+<div class="content-inner">
+    <div class="container-fluid">
+        <!-- Begin Page Header-->
+        @*<div class="row">
+                <div class="page-header">
+                    <div class="d-flex align-items-center">
+                        <h2 class="page-header-title">Actualizacion de Datos</h2>
+                        <div>
+                        </div>
+                    </div>
+                </div>
+            </div>*@
+
+        <!-- End Page Header -->
+        <div class="row flex-row">
+            <div class="col-xl-12">
+                <!-- Basic Tabs -->
+                <div class="widget has-shadow">
+
+                    <div class="widget-header bordered no-actions d-flex align-items-center" style="background-color:#2C304D">
+                        <h4></h4>
+                    </div>
+                    <div id="tab2" class="col-xl-12 mb-3">
+                        <div class="section-title mt-2 mb-1">
+                            <h4>Actualizacion de Estados RQ</h4>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-xl-6 mb-0">
+                                <label class="form-control-label">Numero de RQ:</label>
+                                <input type="text" value="" id="txtRQ" name="txtRQ" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-xl-6 mb-3">
+                                <span class="col-xl-12 pr-0 pl-0"><label class="col-xl-3 pr-0 pl-0">Estado</label><input type="text" value="" id="txtEstadoInicial" name="txtEstAnt" class="col-xl-9"></span>
+                                <select name="cbo_estado" id="cbo_estado" class="custom-select form-control">
+                                    <option value="1">Seleccione Opción</option>                     
+                                </select>
+                            </div>
+                            <div class="col-xl-6 mb-3">
+                                <span class="col-xl-12 pr-0 pl-0"><label class="col-xl-4 pr-0 pl-0">Sub Estado</label><input type="text" value="" id="txtSubEstadoInicial" name="txtSubAnt" class="col-xl-8"></span>
+                                <select name="cbo_subestado" id="cbo_subestado" class="custom-select form-control">                                  
+                                    <option value="1" selected>Seleccione Opción</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-xl-12 mb-1 center">
+                                <button type="button" id="btnBuscarRQ" class="btn btn-primary btn-sm mr-1 mb-2">Buscar</button>
+                                <button type="button" id="btnModificarRQ" class="btn btn-primary btn-sm mr-1 mb-2">Modificar</button>
+                            </div>
+                        </div>
+                        <hr />
+                        <div class="section-title mt-0 mb-1">
+                            <h4>Actualizacion de Datos Cliente</h4>
+                        </div>
+                        <div class="form-group row mb-3 col-xl-12">
+                            <div class="col-xl-6 pr-0 pl-0">
+                                <span class="col-xl-6 pr-0 pl-0"><label class="pr-0 pl-0">Tipo Documento</label></span>
+                                <select name="cbo_tipodoc" id="cbo_tipodoc" class="custom-select form-control col-xl-6">
+                                    <option value="0">Seleccione Opción</option>
+                                    <option value="1">CEX</option>
+                                    <option value="2">CFA</option>
+                                    <option value="3">CFP</option>
+                                    <option value="4">DNI</option>
+                                </select>
+                            </div>
+                            <div class="col-xl-6">
+                                <span class="col-xl-3 pr-5"><label>Documento</label></span>
+                                <input type="text" name="txtDocumento" id="txtDocumento" value="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-xl-12 mb-1 center">
+                                <button type="button"  id="btnBuscarCliente" class="btn btn-primary btn-sm mr-1 mb-2">Buscar</button>
+                                <button type="button"  id="btnModificarCliente" class="btn btn-primary btn-sm mr-1 mb-2">Modificar</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-3">
+                            <div class="col-xl-6 mb-1">
+                                <label class="form-control-label">Apellido Paterno<span class="text-danger ml-2">*</span></label>
+                                <input id="txtAppPaterno" type="text" value="" class="form-control">
+                            </div>
+                            <div class="col-xl-6">
+                                <label class="form-control-label">Apellido Materno<span class="text-danger ml-2">*</span></label>
+                                <input id="txtApeMaterno" type="text" value="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row mb-3">
+                            <div class="col-xl-6 mb-1">
+                                <label class="form-control-label">Nombres<span class="text-danger ml-2">*</span></label>
+                                <input id="txtNombres" type="text" value="" class="form-control">
+                            </div>
+                            <div class="col-xl-6">
+                                <label class="form-control-label">Direccion<span class="text-danger ml-2">*</span></label>
+                                <input id="txtDireccion" type="text" value="" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Basic Tabs -->
+                </div>
+            </div>
+            <!-- End Row -->
+        </div>
+
+
+
+        <!-- End Container -->
+        <!-- Begin Page Footer-->
+        <footer class="main-footer">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-xl-start justify-content-lg-start justify-content-md-start justify-content-center">
+                    <p class="text-gradient-02">Banco Ripley Derechos Reservados</p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Page Footer -->
+        <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+        <!-- Offcanvas Sidebar -->
+        <!-- End Offcanvas Sidebar -->
+    </div>
+
+    <script src="~/assets/vendors/js/base/jquery.min.js"></script>
+    <script src="~/assets/vendors/js/datepicker/moment.min.js"></script>
+    <script src="~/assets/vendors/js/datepicker/daterangepicker.js"></script>
+    <script src="~/assets/js/components/datepicker/datepicker.js"></script>
+    <script src="~/assets/js/app/maskdate/src/jquery.mask.js"></script>
+    <script>
+        // Funcion Carga Combos
+        var actualApePat = "";
+        var actualApeMat = "";
+        var actualNombres = "";
+        var actualDireccion = "";
+
+        var actualModApePat = "";
+        var actualModApeMat = "";
+        var actualModNombres = "";
+        var actualModDireccion = "";
+
+        function validaDNI(dni){
+            var ex_regular_dni;
+            ex_regular_dni = /^\d{8}(?:[-\s]\d{4})?$/;
+            if (ex_regular_dni.test(dni) == true) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+
+
+        function CargarCombos() {
+            //Carga de Estados
+            $.ajax(
+                {
+                    //url: "../api/EPPlus/importencuesta",
+                    url: "../UpdateDatos/CargaEstado",
+                    processData: false,
+                    contentType: false,
+                    dataType: "json",
+                    type: 'GET',
+                    async: true,
+                    cache: false,
+                    success: function (data) {
+                        $.each(data, function () {
+                            $('#cbo_estado')
+                                .append($("<option></option>")
+                                    .attr("value", this.coD_PARAM_DET)
+                                    .text(this.glS_PARAM_DET)); 
+                        });         
+                       
+                    },
+                    error: function (jqXHR) {
+                    },
+                    complete: function (jqXHR, status) {
+                    }
+                }
+            );
+
+            //Carga de Subestados
+            $.ajax(
+                {
+                    //url: "../api/EPPlus/importencuesta",
+                    url: "../UpdateDatos/CargaSubEstado",
+                    processData: false,
+                    contentType: false,
+                    dataType: "json",
+                    type: 'GET',
+                    async: true,
+                    cache: false,
+                    success: function (data) {
+                        $.each(data, function () {
+                            $('#cbo_subestado')
+                                .append($("<option></option>")
+                                    .attr("value", this.coD_PARAM_DET)
+                                    .text(this.glS_PARAM_DET));
+                        });
+
+                    },
+                    error: function (jqXHR) {
+                    },
+                    complete: function (jqXHR, status) {
+                    }
+                }
+            );
+
+        }
+
+        $(document).ready(function () {
+            //Bloqueo Combos
+            $('#cbo_estado').prop('disabled', true);
+            $('#cbo_subestado').prop('disabled', true);
+            //Bloqueo Campos de Estados Iniciales
+            $('#txtEstadoInicial').prop('disabled', true);
+            $('#txtSubEstadoInicial').prop('disabled', true);
+            //Bloqueo los campos al iniciar
+
+            var busqueda = 0;
+            var busquedaCliente = 0;
+            
+            CargarCombos();
+
+            //btnModificarRQ
+
+            $('#btnBuscarRQ').on("click", function (event) {
+
+                var rq = $('#txtRQ').val();
+
+                if (rq.trim() == '') {
+                    alert('Se debe ingresar un Numero de RQ');
+                    return false;
+                }
+                
+                
+                $.ajax(
+                    {
+                        //url: "../api/EPPlus/importencuesta",
+                        url: "../UpdateDatos/BuscarRQ/?ticket=" + rq,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        type: 'GET',
+                        async: true,
+                        cache: false,
+                        success: function (data) {
+                            
+                            if (data.condicion === 0)
+                            {
+                                alert('RQ Inexistente');
+                            }
+                            else
+                            {
+                                var estado = data.estado;
+                                var subestado = data.subestado;
+
+                                //Habilito los Campos.
+                                $('#cbo_estado').prop('disabled', false);
+                                $('#cbo_subestado').prop('disabled', false);
+                                //Selecciono los valores.
+                                $("#txtEstadoInicial").val(estado);
+                                $("#txtSubEstadoInicial").val(subestado);
+                                busqueda = 1;
+                            }
+
+                        },
+                        error: function (jqXHR) {
+                        },
+                        complete: function (jqXHR, status) {
+                        }
+                    }
+                );
+
+            });
+
+            $('#btnModificarRQ').on("click", function (event) {
+
+
+                var estadoLink = $("#cbo_estado option:selected").val();
+                var subestadoLink = $("#cbo_subestado option:selected").val();
+
+
+                if (estadoLink == '1') {
+                    alert('Usted debe seleccionar un estado');
+                    return false;
+                }
+
+
+                if (subestadoLink == '1') {
+                    alert('Usted debe seleccionar un subestado');
+                    return false;
+                }
+
+                var rq = $('#txtRQ').val();
+
+                if (busqueda === 0) {
+                    alert('Primero Debe Realizar Una Busqueda');
+                    return false;
+                }
+
+                var estadoLink = $("#cbo_estado option:selected").text();
+                var subestadoLink = $("#cbo_subestado option:selected").text();
+
+
+                $.ajax(
+                    {
+                        //url: "../api/EPPlus/importencuesta",
+                        url: "../UpdateDatos/ActualizarRQ/?ticket=" + rq + "&estado=" + estadoLink + "&subestado=" + subestadoLink,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        type: 'GET',
+                        async: true,
+                        cache: false,
+                        success: function (data) {
+
+                            if (data.condicion === 0) {
+                                alert('Los estados seleccionados no estan correlacionados');
+                            }
+                            else {
+                                alert('Se actualizo de manera exitosa');
+                                var estado = data.estado;
+                                var subestado = data.subestado;
+
+                                //Habilito los Campos.
+                                $('#cbo_estado').prop('enable', false);
+                                $('#cbo_subestado').prop('enable', false);
+
+                                $('#txtEstadoInicial').prop('disabled', true);
+                                $('#txtSubEstadoInicial').prop('disabled', true);
+
+                                //Selecciono los valores.
+                                $("#txtEstadoInicial").val(estado);
+                                $("#txtSubEstadoInicial").val(subestado);
+                                busqueda = 0;
+                            }
+
+                        },
+                        error: function (jqXHR) {
+                        },
+                        complete: function (jqXHR, status) {
+                        }
+                    }
+                );
+
+            });
+
+            $('#btnBuscarCliente').on("click", function (event) {
+
+                $('#txtDocumento').prop('disabled', false);
+
+                var tipoDocLink = $("#cbo_tipodoc option:selected").val();
+
+                var tipoDoc = $("#cbo_tipodoc option:selected").text();               
+                var doc = $('#txtDocumento').val();
+
+                var valido = validaDNI(doc);
+
+                if (tipoDocLink == '0') {
+                    alert('Usted debe seleccionar un Tipo de Documento');
+                    return false;
+                }
+
+                if (doc.trim() == '') {
+                    alert('Se debe ingresar un Numero de Documento');
+                    return false;
+                }                
+
+                if (valido == '0' && tipoDocLink==4) {
+                    alert('DNI no valido');
+                    $("#txtAppPaterno").val('');
+                    $("#txtApeMaterno").val('');
+                    $("#txtNombres").val('');
+                    $("#txtDireccion").val('');
+                    return false;
+                }
+               
+
+                $.ajax(
+                    {
+                        //url: "../api/EPPlus/importencuesta",
+                        url: "../UpdateDatos/BuscarCliente/?tipoDoc=" + tipoDoc + "&numeroDocumento=" + doc,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        type: 'GET',
+                        async: true,
+                        cache: false,
+                        success: function (data) {
+
+                            if (data.condicion === 0) {
+                                alert('Cliente No Existe');
+                            }
+                            else {
+                                var apppaterno = data.appaterno;
+                                var apmaterno = data.apmaterno;
+                                var nombres = data.nombres;
+                                var direccion = data.direccion;
+
+                                $("#txtAppPaterno").val(apppaterno.trim());
+                                $("#txtApeMaterno").val(apmaterno.trim());
+                                $("#txtNombres").val(nombres.trim());
+                                $("#txtDireccion").val(direccion.trim());
+
+                                actualApePat = apppaterno.trim();
+                                actualApeMat = apmaterno.trim();
+                                actualNombres = nombres.trim();
+                                actualDireccion = direccion.trim();
+
+                                
+                                busquedaCliente = 1;
+
+                            }
+
+                        },
+                        error: function (jqXHR) {
+                        },
+                        complete: function (jqXHR, status) {
+                        }
+                    }
+                );
+            });
+
+            $('#btnModificarCliente').on("click", function (event) {
+
+                var tipoDocLink = $("#cbo_tipodoc option:selected").val();
+
+                if (busquedaCliente === 0) {
+                    alert('Primero Debe Realizar Una Busqueda');
+                    return false;
+                }
+
+                var tipoDoc = $("#cbo_tipodoc option:selected").text();
+                var doc = $('#txtDocumento').val();
+
+                if (tipoDocLink == '0') {
+                    alert('Usted debe seleccionar un tipo de Documento');
+                    return false;
+                }
+
+                var appaterno = $('#txtAppPaterno').val();
+                var apmaterno = $('#txtApeMaterno').val();
+                var nombres = $('#txtNombres').val();
+                var direccion = $('#txtDireccion').val();
+
+                actualModApePat = appaterno;
+                actualModApeMat = apmaterno;
+                actualModNombres = nombres;
+                actualModDireccion = direccion;
+
+                if (actualApePat == actualModApePat && actualApeMat == actualModApeMat && actualNombres == actualModNombres && actualDireccion == actualModDireccion)
+                {
+                    alert('Se deben realizar canmbios para modificar');
+                    return false;               
+                }
+
+                $.ajax(
+                    {
+                        //url: "../api/EPPlus/importencuesta",
+                        url: "../UpdateDatos/ActualizarCliente?tipoDocumento=" + tipoDoc + "&documento=" + doc+"&appaterno=" + appaterno + "&appmaterno=" + apmaterno + "&nombres=" + nombres + "&direccion=" + direccion,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        type: 'GET',
+                        async: true,
+                        cache: false,
+                        success: function (data) {
+
+                            $('#txtDocumento').prop('disabled', true);
+
+                            if (data.condicion === 1) {
+                                alert('Se actualizo de manera exitosa');
+                                $("#txtAppPaterno").val(data.appaterno);
+                                $("#txtApeMaterno").val(data.apmaterno);
+                                $("#txtNombres").val(data.nombres);
+                                $("#txtDireccion").val(data.direccion);
+
+                                busqueda = 0;
+                            }
+                            else {
+                                alert('Error en Actualizacion');
+                               
+                                busqueda = 1;
+                            }
+
+                        },
+                        error: function (jqXHR) {
+                        },
+                        complete: function (jqXHR, status) {
+                        }
+                    }
+                );
+
+            });
+
+        });
+    </script>
+    <!-- End Page Vendor Js -->
+    <!-- Begin Page Snippets -->

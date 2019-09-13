@@ -1,0 +1,568 @@
+﻿<link href="~/assets/vendors/css/base/spinner.css" rel="stylesheet" />
+
+
+<div class="content-inner">
+    <div class="container-fluid">
+        <!-- Begin Page Header-->
+        <div class="row">
+            <div class="page-header">
+                <div class="d-flex align-items-center">
+                    <h2 class="page-header-title">Carga Masiva de Archivos</h2>
+                    <div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End Page Header -->
+        <div class="row flex-row">
+            <div class="col-xl-12">
+                <!-- Basic Tabs -->
+                <div class="widget has-shadow">
+
+                    <div class="widget-header bordered no-actions d-flex align-items-center" style="background-color:#2C304D">
+                        <h4></h4>
+                    </div>
+                    <div class="widget-body sliding-tabs">
+                        <ul class="nav nav-tabs" id="example-one" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="base-tab-1" data-toggle="tab" href="#tab-1" role="tab" aria-controls="tab-1" aria-selected="true">Cargar Archivo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="base-tab-2" data-toggle="tab" href="#tab-2" role="tab" aria-controls="tab-2" aria-selected="false">Reporte de Cargas</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content pt-5">
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="base-tab-1">
+                                <form class="form-horizontal" id="form" name="form" action="/import" enctype="multipart/form-data" method="post">
+                                    <div class="row d-flex align-items-center mb-5" style="min-height:100%; height:100%">
+                                        <div class="col-lg-12 vh-75 min-vh-25">
+                                            <div class="form-group">
+                                                <div>
+                                                    <center>
+                                                        <select id="cmbSelectCarga" class="selectpicker">
+                                                            <option value="1">Cierre</option>
+                                                            <option value="2">Reclasificaciones</option>
+                                                            <option value="3">Encuestas</option>
+                                                        </select>
+                                                        <input id="formFile" name="archivo" type="file" style="display: none;" />
+                                                        <input type="button" value="Examinar..." onclick="document.getElementById('formFile').click();" />
+                                                    </center>
+                                                </div>
+                                                <div>
+                                                    <br />
+                                                </div>
+                                                <div class="pb-10">
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <center>
+                                        <div class="row d-flex align-items-center mb-5">
+                                            <div id="spinner"></div>
+                                        </div>
+                                    </center>
+                                </form>
+
+                                <center>
+
+                                    <button type="button" id="Cargar" class="btn btn-primary mr-1 mb-2">Cargar</button>
+                                    <button type="button" id="Cancelar" class="btn btn-primary mr-1 mb-2">Cancelar</button>
+
+                                </center>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-8 d-flex align-items-center mb-3">
+                                    <button type="button" class="btn btn-info invisible" id="btnLaunch" data-toggle="modal" data-target="#modal-small">Launch Modal</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-8 d-flex align-items-center mb-3">
+                                    <button type="button" class="btn btn-info invisible" id="btnLaunch3" data-toggle="modal" data-target="#modal-small3">Launch Modal</button>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="base-tab-2">
+                                <center>
+                                    <div class="form-group row d-flex align-content-center">
+
+                                        <label class="col-sm-2 form-control-label text-justify">Fecha -Inicio</label>
+                                        <div class="col-sm-4 align-content-center">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="la la-calendar"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control" id="date1" placeholder="Select value" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <label class="col-sm-2 form-control-label text-justify">Fecha-Fin</label>
+                                        <div class="col-sm-4">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="la la-calendar"></i>
+                                                    </span>
+                                                    <input type="text" class="form-control" id="date2" placeholder="Select value">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </center>
+                                <center>
+                                    <button type="button" id="Generar" class="btn btn-primary mr-1 mb-2">Generar Reporte</button>
+                                </center>
+                                <div class="row">
+                                    <div class="col-xl-8 d-flex align-items-center mb-3">
+                                        <button type="button" class="btn btn-info invisible" id="btnLaunch2" data-toggle="modal" data-target="#modal-small2">Launch Modal</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Basic Tabs -->
+            </div>
+        </div>
+        <!-- End Row -->
+    </div>
+    <!-- Modales -->
+    <div id="modal-small" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Resumen de la Carga</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Carga Exitosa
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-shadow" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales -->
+    <div id="modal-small2" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        <center><b><u>Resumen del Reporte Generado</u></b></center>
+                    </p>
+                    <div id="contenedorReporte">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-shadow" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales -->
+    <div id="modal-small3" class="modal fade">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Resumen de la Carga</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">close</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Error de Carga : Estructura No Corresponde. <i class="glyphicon glyphicon-remove"></i>
+                    </p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-shadow" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- End Container -->
+    <!-- Begin Page Footer-->
+    <footer class="main-footer">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 d-flex align-items-center justify-content-xl-start justify-content-lg-start justify-content-md-start justify-content-center">
+                <p class="text-gradient-02">Banco Ripley Derechos Reservados</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Page Footer -->
+    <a href="#" class="go-top"><i class="la la-arrow-up"></i></a>
+    <!-- Offcanvas Sidebar -->
+    <!-- End Offcanvas Sidebar -->
+</div>
+<script src="~/assets/vendors/js/base/jquery.min.js"></script>
+<script src="assets/vendors/js/nicescroll/nicescroll.min.js"></script>
+<script src="~/assets/vendors/js/datepicker/moment.min.js"></script>
+<script src="~/assets/vendors/js/datepicker/daterangepicker.js"></script>
+<script src="~/assets/js/components/datepicker/datepicker.js"></script>
+<script src="~/assets/js/app/maskdate/src/jquery.mask.js"></script>
+<!-- End Page Vendor Js -->
+<!-- Begin Page Snippets -->
+<script type="text/javascript">
+
+    $("#date1").mask("99/99/9999", { placeholder: 'dd/mm/yyyy' });
+    $("#date2").mask("99/99/9999", { placeholder: 'dd/mm/yyyy' });
+
+    const spinner = document.getElementById("spinner");
+
+    spinner.setAttribute('hidden', 'none');
+   
+    $('#Generar').on("click", function (event) {
+
+        //Al generar debemos saber de donde provendra el reporte de que tipo.
+
+        var dateRegex = /^(?=\d)(?:(?:31(?!.(?:0?[2469]|11))|(?:30|29)(?!.0?2)|29(?=.0?2.(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(?:\x20|$))|(?:2[0-8]|1\d|0?[1-9]))([-.\/])(?:1[012]|0?[1-9])\1(?:1[6-9]|[2-9]\d)?\d\d(?:(?=\x20\d)\x20|$))?(((0?[1-9]|1[012])(:[0-5]\d){0,2}(\x20[AP]M))|([01]\d|2[0-3])(:[0-5]\d){1,2})?$/;
+
+        //Validamos las fechas sino retornamos
+        var InicioValida = dateRegex.test($("#date1").val())
+        var FinValida = dateRegex.test($("#date2").val())
+
+        //Elegimos el tipo de Carga que se realizo.
+        var tipCarga = $("#cmbSelectCarga").val();
+
+        if (InicioValida == false || FinValida == false) { alert('Fechas Invalidas'); return false; }
+        else {
+
+            var NuevaFechaInicio = $("#date1").val().split(/\//);
+            var NuevaFechaInicioJoin = [NuevaFechaInicio[1], NuevaFechaInicio[0], NuevaFechaInicio[2]].join('/');
+            var NuevaFechaFinal = $("#date2").val().split(/\//);
+            var NuevaFechaFinalJoin = [NuevaFechaFinal[1], NuevaFechaFinal[0], NuevaFechaFinal[2]].join('/');
+
+            var link = "../Cargas/api/EPPlus/ExportV2?fechaInicio=" + NuevaFechaInicioJoin + "&fechaFin=" + NuevaFechaFinalJoin + "&tipCarga=" + tipCarga ;
+            //var link = "../api/EPPlus/ExportV2?fechaInicio=" + NuevaFechaInicioJoin + "&fechaFin=" + NuevaFechaFinalJoin + "&tipCarga=" + tipCarga;
+
+            //Tipo de Carga
+            var tipCarga = $("#cmbSelectCarga").val();
+
+            var NuevaFechaInicio = $("#date1").val().split(/\//);
+            var NuevaFechaInicioJoin = [NuevaFechaInicio[1], NuevaFechaInicio[0], NuevaFechaInicio[2]].join('/');
+            var NuevaFechaFinal = $("#date2").val().split(/\//);
+            var NuevaFechaFinalJoin = [NuevaFechaFinal[1], NuevaFechaFinal[0], NuevaFechaFinal[2]].join('/');
+
+
+            $.ajax(
+                {
+                    url: "../Cargas/api/EPPlus/DevuelveErrores/?fechaInicio=" + NuevaFechaInicioJoin + '&fechaFin=' + NuevaFechaFinalJoin + '&tipCarga=' + tipCarga,
+                    //url: "../api/EPPlus/DevuelveErrores/?fechaInicio=" + NuevaFechaInicioJoin + '&fechaFin=' + NuevaFechaFinalJoin + '&tipCarga=' + tipCarga,
+                    dataType: "json",
+                    type: "GET",
+                    async: false,
+                    cache :false,
+                    success: function (data) {
+
+                        var objP = JSON.parse(JSON.stringify(data));
+                       
+
+                        $("#contenedorReporte").html("Numero de Registros Cargados" + "<p>" + objP.numeroCargados + "</p><br>" + "Numero de Registros No Procesados" + "<p>" + objP.numeroNoProcesados + "</p>");
+
+                        $("#btnLaunch2").click();
+
+                    },
+                    error: function (jqXHR) {
+                    },
+                    complete: function (jqXHR, status) {
+                    }
+                }
+            );
+
+            window.location.href = link;
+        }
+
+       // window.location.href = link;
+
+           
+        });
+
+
+
+    $('#Cargar').on("click", function (event) {
+
+        var TipoCarga = $("#cmbSelectCarga").val();
+
+        var dateRegex = /^(?=\d)(?:(?:31(?!.(?:0?[2469]|11))|(?:30|29)(?!.0?2)|29(?=.0?2.(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00)))(?:\x20|$))|(?:2[0-8]|1\d|0?[1-9]))([-.\/])(?:1[012]|0?[1-9])\1(?:1[6-9]|[2-9]\d)?\d\d(?:(?=\x20\d)\x20|$))?(((0?[1-9]|1[012])(:[0-5]\d){0,2}(\x20[AP]M))|([01]\d|2[0-3])(:[0-5]\d){1,2})?$/;
+
+        var nombreValido = true;
+
+        var file1 = $("#formFile")[0].files[0];
+
+        var filename = $("#formFile").val();
+
+        var extension = filename.replace(/^.*\./, '');
+
+        var nombreArchivo = file1.name;
+        //Este es el nombre solo para Cierre de Mes.
+        var nameCierreComienzo = nombreArchivo.substring(0, 14);
+        //Este es el nombre para Reclasificaciones.
+        var nameReclasificacionesComienzo = nombreArchivo.substring(0, 18);
+
+        var nameReclasificacionesCompleto= nombreArchivo.substring(0, nombreArchivo.length - 5);
+
+        var nameCierreComienzo = nombreArchivo.substring(0, 14);
+
+        var nameCierreCompleto = nombreArchivo.substring(0, nombreArchivo.length - 5);
+
+        var nameEncuestasComienzo = nombreArchivo.substring(0,14);
+
+        var nameEncuestasCompleto = nombreArchivo.substring(0, nombreArchivo.length - 5);
+
+
+
+
+        if (TipoCarga == 1) {
+
+            if (nameReclasificacionesComienzo == 'Reclasificaciones_') { nombreValido = false; alert('Opcion Incorrecta Seleccionada'); return false; }
+
+            if (nameEncuestasComienzo == 'CargaEncuesta_') { nombreValido = false; alert('Opcion Incorrecta Seleccionada'); return false; }
+
+            if (nameCierreComienzo!= 'Cierre_Masivo_') { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+            if (nameCierreCompleto.length != 22) { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+            var validaFechaArchivo = nombreArchivo.substring(14, 22);
+
+            var dia = validaFechaArchivo.substring(0, 2);
+            var mes = validaFechaArchivo.substring(2, 4);
+            var ano = validaFechaArchivo.substring(4, 8);
+            var fecha = dia + '/' + mes + '/' + ano;
+
+            if (dateRegex.test(fecha) == false) { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+
+            if (extension == filename) {
+                extension = '';
+            } else {
+                extension = extension.toLowerCase();
+            }
+
+
+            if (extension == 'xlsx') {
+
+                var formData = new FormData();
+
+                formData.append("formFile", file1);
+
+                formData.append("nombreDocumento", nombreArchivo);
+
+                spinner.removeAttribute('hidden');
+
+                $.ajax(
+                    {
+                        url: "../Cargas/api/EPPlus/import",
+                        //url: "../api/EPPlus/import",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        type: "POST",
+                        async: true,
+                        success: function (data) {
+                            spinner.setAttribute('hidden', '');
+
+                            if (data.msg == "Estructura No Valida") {
+                                $("#btnLaunch3").click();
+                            }
+                            if (data.code != -1) {
+                                $("#btnLaunch").click();
+                            }
+                                
+                        },
+                        error: function (jqXHR) {
+                        },
+                        complete: function (jqXHR, status) {
+                        }
+                    }
+                );
+
+
+            } else {
+                alert('Extension No Valida');
+
+                return false;
+            }
+
+        }
+        else if (TipoCarga == 2) {            
+
+            if (nameEncuestasComienzo == 'CargaEncuesta_') { nombreValido = false; alert('Opcion Incorrecta Seleccionada'); return false; }
+
+            if (nameCierreComienzo == 'Cierre_Masivo_') { nombreValido = false; alert('Opcion Incorrecta Seleccionada'); return false; }
+
+            if (nameReclasificacionesComienzo != 'Reclasificaciones_') { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+            if (nameReclasificacionesCompleto.length != 26) { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+            var validaFechaArchivo = nombreArchivo.substring(18, 26);
+
+            var dia = validaFechaArchivo.substring(0, 2);
+            var mes = validaFechaArchivo.substring(2, 4);
+            var ano = validaFechaArchivo.substring(4, 8);
+            var fecha = dia + '/' + mes + '/' + ano;
+
+            if (dateRegex.test(fecha) == false) { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+
+            if (extension == filename) {
+                extension = '';
+            } else {
+                extension = extension.toLowerCase();
+            }
+
+            if (extension == 'xlsx') {
+
+                var formData = new FormData();
+
+                formData.append("formFile", file1);
+
+                formData.append("nombreDocumento", nombreArchivo);
+
+                spinner.removeAttribute('hidden');
+
+                $.ajax(
+                    {
+                        //url: "../api/EPPlus/importreclasificaciones",
+                        url: "../Cargas/api/EPPlus/importreclasificaciones",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        type: "POST",
+                        async: true,
+                        success: function (data) {
+                            spinner.setAttribute('hidden', '');
+
+                            if (data.msg == "Estructura No Valida") {
+                                $("#btnLaunch3").click();
+                            }
+                            if (data.code != -1) {
+                                $("#btnLaunch").click();
+                            }
+                        },
+                        error: function (jqXHR) {
+                        },
+                        complete: function (jqXHR, status) {
+                        }
+                    }
+                );
+
+
+            } else {
+                alert('Extension No Valida');
+
+                return false;
+            }
+
+
+
+        }
+        else if (TipoCarga == 3) {            
+
+            if (nameReclasificacionesComienzo == 'Reclasificaciones_') { nombreValido = false; alert('Opcion Incorrecta Seleccionada'); return false; }
+
+            if (nameCierreComienzo == 'Cierre_Masivo_') { nombreValido = false; alert('Opcion Incorrecta Seleccionada'); return false; }
+
+            if (nameEncuestasComienzo != 'CargaEncuesta_') { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+            if (nameEncuestasCompleto.length != 22) { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+            var validaFechaArchivo = nombreArchivo.substring(14, 22);
+
+            
+
+            var dia = validaFechaArchivo.substring(0, 2);
+            var mes = validaFechaArchivo.substring(2, 4);
+            var ano = validaFechaArchivo.substring(4, 8);
+            var fecha = dia + '/' + mes + '/' + ano;
+
+            if (dateRegex.test(fecha) == false) { nombreValido = false; alert('Nombre Invalido'); return false; }
+
+            if (extension == filename) {
+                extension = '';
+            } else {
+                extension = extension.toLowerCase();
+            }
+
+
+            if (extension == 'xlsx') {
+
+                var formData = new FormData();
+
+                formData.append("formFile", file1);
+
+                formData.append("nombreDocumento", nombreArchivo);
+
+                spinner.removeAttribute('hidden');
+
+                $.ajax(
+                    {
+                        //url: "../api/EPPlus/importencuesta",
+                        url: "../Cargas/api/EPPlus/importencuesta",
+                        data: formData,
+                        processData: false,
+                        contentType: false,
+                        dataType: "json",
+                        type: "POST",
+                        async: true,
+                        success: function (data) {
+                            spinner.setAttribute('hidden', '');
+
+                            if (data.msg == "Estructura No Valida") {
+                                $("#btnLaunch3").click();
+                            }
+                            if (data.code != -1) {
+                                $("#btnLaunch").click();
+                            }
+                        },
+                        error: function (jqXHR) {
+                        },
+                        complete: function (jqXHR, status) {
+                        }
+                    }
+                );
+
+
+            } else {
+                alert('Extension No Valida');
+
+                return false;
+            }
+
+
+        }
+
+    });
+
+
+
+
+</script>
